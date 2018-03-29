@@ -45,6 +45,28 @@ Browse to http://localhost:8080 and you should see JSON output similar to the on
 }
 ```
 
+## Test with [Kubernetes]
+
+```bash
+cd k8s
+
+kubectl create -f ./setup-rookfs.yml
+kubectl create -f ./go-vol-service.yml
+kubectl create -f ./go-vol-deployment.yml
+```
+
+Find the new nodePort service:
+```bash
+kubectl get service --selector=app=go-vol-service
+```
+```bash
+NAME             TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+go-vol-service   NodePort   10.104.151.78   <none>        80:31020/TCP   19m
+```
+
+[Kubernetes] assigned port 31020 on my cluster, so I browse to http://n1.imti.cloud:31020. Port assignment is random since I did not specify a port in the provided configuration.
+
+
 
 ## Resources
 - [Docker]
