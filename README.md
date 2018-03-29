@@ -1,3 +1,6 @@
+[![Docker Container Image Size](https://shields.beevelop.com/docker/image/image-size/cjimti/go-vol/latest.svg)](https://hub.docker.com/r/cjimti/go-vol/)
+[![Docker Container Layers](https://shields.beevelop.com/docker/image/layers/cjimti/go-vol/latest.svg)](https://hub.docker.com/r/cjimti/go-vol/)
+[![Docker Container Pulls](https://img.shields.io/docker/pulls/cjimti/go-vol.svg)](https://hub.docker.com/r/cjimti/go-vol/)
 
 # GO Vol
 
